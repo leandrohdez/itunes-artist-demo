@@ -8,10 +8,20 @@
 
 import Foundation
 
+struct AlbumSubitemData {
+    var title: String
+    var thumbnailUrl: String
+}
+
 struct ArtistListItemData {
     var title: String
     var subtitle: String
-    var subitems: [String]
+    var subitems: [AlbumSubitemData]
+}
+
+struct ArtistHeaderData {
+    var title: String
+    var subtitle: String
 }
 
 struct AlbumListItemData {

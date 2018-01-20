@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sB1-Jg-Y2c" customClass="ArtistDetailHeaderView" customModule="itunes_artist_demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wb-J8-7yq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-R4-vCL">
+                    <rect key="frame" x="106" y="98" width="163" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="WZL-3D-KwN"/>
+                        <constraint firstAttribute="height" constant="21" id="h7b-QV-y3w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVh-Rs-CHD">
+                    <rect key="frame" x="16" y="54" width="343" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="uMk-sx-oqN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wC0-uG-tf0" firstAttribute="bottom" secondItem="5g8-R4-vCL" secondAttribute="bottom" constant="51" id="2vj-9o-8N2"/>
+                <constraint firstItem="9Wb-J8-7yq" firstAttribute="bottom" secondItem="wC0-uG-tf0" secondAttribute="bottom" id="4EB-4z-fiK"/>
+                <constraint firstItem="9Wb-J8-7yq" firstAttribute="trailing" secondItem="wC0-uG-tf0" secondAttribute="trailing" id="8o9-Jq-blO"/>
+                <constraint firstItem="wC0-uG-tf0" firstAttribute="trailing" secondItem="JVh-Rs-CHD" secondAttribute="trailing" constant="16" id="Cbj-9n-U5k"/>
+                <constraint firstItem="JVh-Rs-CHD" firstAttribute="leading" secondItem="wC0-uG-tf0" secondAttribute="leading" constant="16" id="Ikh-5y-kg3"/>
+                <constraint firstItem="9Wb-J8-7yq" firstAttribute="leading" secondItem="wC0-uG-tf0" secondAttribute="leading" id="Kr1-ni-XwO"/>
+                <constraint firstItem="5g8-R4-vCL" firstAttribute="centerX" secondItem="JVh-Rs-CHD" secondAttribute="centerX" id="Lir-Et-b4y"/>
+                <constraint firstItem="JVh-Rs-CHD" firstAttribute="top" secondItem="wC0-uG-tf0" secondAttribute="top" constant="54" id="XKk-F0-PUv"/>
+                <constraint firstItem="9Wb-J8-7yq" firstAttribute="top" secondItem="wC0-uG-tf0" secondAttribute="top" id="b6W-oi-urg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="wC0-uG-tf0"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="5g8-R4-vCL" id="P4A-Nl-183"/>
+                <outlet property="titleLabel" destination="JVh-Rs-CHD" id="v2U-sj-Kuh"/>
+            </connections>
+            <point key="canvasLocation" x="-20.5" y="45"/>
+        </view>
+    </objects>
+</document>

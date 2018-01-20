@@ -91,9 +91,11 @@ extension ArtistListPresenter {
             var result: [ArtistListItemData] = []
             self.artists.forEach { artist in
                 
-                var subitems: [String] = []
+                var subitems: [AlbumSubitemData] = []
                 artist.albums.forEach { album in
-                    subitems.append(album.name)
+                    subitems.append(
+                        AlbumSubitemData(title: album.name, thumbnailUrl: album.artworkUrl)
+                    )
                 }
                 
                 result.append(

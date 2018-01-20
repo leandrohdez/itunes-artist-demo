@@ -10,7 +10,8 @@ import Foundation
 
 
 protocol ArtistDetailPresenterView: class {
-   func performListItemsData(items: [AlbumListItemData])
+    func performHeaderData(headerData: ArtistHeaderData)
+    func performListItemsData(items: [AlbumListItemData])
 }
 
 class ArtistDetailPresenter: Presenter {
@@ -23,6 +24,14 @@ class ArtistDetailPresenter: Presenter {
         self.view = view
     }
     
+    func getArtist() {
+        guard let view = self.view else { return }
+        
+        if let artist = self.artist {
+            view.performHeaderData(headerData: ArtistHeaderData(title: artist.name, subtitle: artist.genre))
+        }
+    }
+    
     func getAlumbums() {
         guard let view = self.view else { return }
         
@@ -30,13 +39,13 @@ class ArtistDetailPresenter: Presenter {
             var resultListAlbums: [AlbumListItemData] = []
             
             artist.albums.forEach { album in
+                
                 resultListAlbums.append(
-                    AlbumListItemData(title: album.name, subtitle: album.date, detail: album.copyright, thumbnailUrl: album.artworkUrl)
+                    AlbumListItemData(title: album.name, subtitle: album.year, detail: album.copyright, thumbnailUrl: album.artworkUrl)
                 )
             }
             
             view.performListItemsData(items: resultListAlbums)
         }
     }
-    
 }

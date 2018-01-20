@@ -25,6 +25,7 @@ class ArtistDetailViewController: BaseViewController {
     }
     
     // MARK: Properties
+    var header: ArtistHeaderData?
     var listItems: [AlbumListItemData] = []
     
     private let loadingIndicator = GradientLoadingBar()
@@ -39,24 +40,38 @@ class ArtistDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let header = Bundle.main.loadNibNamed("ArtistDetailHeaderView", owner: self, options: nil)![0] as? ArtistDetailHeaderView {
+            self.tableView.tableHeaderView = header
+        }
+        
         self.loadData()
         customizeUI()
     }
 
     private func customizeUI() {
-        self.title = "Artista detalle"
+        self.title = "Artista"
     }
 }
 
 // MARK: - Methods
 extension ArtistDetailViewController {
     func loadData() {
+        self.artistPresenter.getArtist()
         self.artistPresenter.getAlumbums()
     }
 }
 
 // MARK: Presenter Methods
 extension ArtistDetailViewController: ArtistDetailPresenterView {
+    
+    func performHeaderData(headerData: ArtistHeaderData) {
+        self.header = headerData
+        if let view = self.tableView.tableHeaderView as? ArtistDetailHeaderView {
+            view.titleLabel.text    = headerData.title
+            view.subtitleLabel.text = headerData.subtitle
+        }
+    }
+    
     func performListItemsData(items: [AlbumListItemData]) {
         self.listItems = items
         self.tableView.reloadData()
@@ -79,6 +94,7 @@ extension ArtistDetailViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AlbumTableViewCell
         
         cell.titleLabel.text        = item.title
+        cell.subtitleLabel.text     = item.subtitle
         cell.descriptionLabel.text  = item.detail
         cell.thumbnail.image        = UIImage(named: "default_music_icon")
         cell.thumbnail!.loadImageFromUrl(urlString: item.thumbnailUrl)

@@ -33,7 +33,7 @@
                 <constraint firstItem="xks-Xe-3Ky" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hUB-kI-kmf"/>
                 <constraint firstItem="xks-Xe-3Ky" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rAC-1u-jDG"/>
             </constraints>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="32.5" y="83.5"/>
         </view>

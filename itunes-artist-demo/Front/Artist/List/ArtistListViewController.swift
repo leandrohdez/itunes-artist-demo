@@ -104,18 +104,40 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.genreLabel.text        = item.subtitle
         
         if item.subitems.count > 0 {
-            cell.albumsTitleLabel.text = "Discografía:"
+            cell.albumsTitleLabel.text = "Discografía:".uppercased()
             
             if item.subitems.count > 0 {
-                cell.albumName1Label.text = "♫ \(item.subitems[0])"
+                cell.albumName1Label.isHidden = false
+                cell.albumName1Label.text = "\(item.subitems[0].title)"
+                
+                cell.thumbnail1ImageView.isHidden = false
+                cell.thumbnail1ImageView.image = UIImage(named: "default_music_icon")
+                cell.thumbnail1ImageView!.loadImageFromUrl(urlString: item.subitems[0].thumbnailUrl)
+            }
+            else {
+                cell.albumName1Label.isHidden = true
+                cell.thumbnail1ImageView.isHidden = true
             }
             
             if item.subitems.count > 1 {
-                cell.albumName2Label.text = "♫ \(item.subitems[1])"
+                cell.albumName2Label.isHidden = false
+                cell.albumName2Label.text = "\(item.subitems[1].title)"
+                
+                cell.thumbnail2ImageView.isHidden = false
+                cell.thumbnail2ImageView.image = UIImage(named: "default_music_icon")
+                cell.thumbnail2ImageView!.loadImageFromUrl(urlString: item.subitems[1].thumbnailUrl)
+            }
+            else {
+                cell.albumName2Label.isHidden = true
+                cell.thumbnail2ImageView.isHidden = true
             }
             
             if item.subitems.count > 2 {
-                cell.albumsCountLabel.text = "\(item.subitems.count-2) mas"
+                cell.albumsCountLabel.isHidden = false
+                cell.albumsCountLabel.text = "+\(item.subitems.count-2)"
+            }
+            else {
+                cell.albumsCountLabel.isHidden = true
             }
         }
         
@@ -126,7 +148,7 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        let item = self.listItems[indexPath.row]
-        return 145
+        return 130
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

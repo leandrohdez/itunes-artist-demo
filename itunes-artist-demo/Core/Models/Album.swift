@@ -28,6 +28,10 @@ class Album: CustomStringConvertible, Equatable {
     
     var date: String
     
+    var year: String {
+        return self.date.components(separatedBy: "-")[0]
+    }
+    
     init(id: Int, name: String, genre: String, artworkUrl: String, copyright: String, date: String) {
         self.id = id
         self.name = name
