@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="AlbumTableViewCell" customModule="itunes_artist_demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-6W-x70">
+                        <rect key="frame" x="5" y="5" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="BeE-nr-ZEV"/>
+                            <constraint firstAttribute="width" constant="100" id="TKw-KA-8tA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year of the collection of the mana band" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-fH-zYy">
+                        <rect key="frame" x="113" y="5" width="199" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39" id="Ae5-p2-bxi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pop Rock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06U-vE-uWb">
+                        <rect key="frame" x="8" y="88" width="94" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipmsum wawa wakaLorem ipmsum wawa waka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yQ-Kk-jcA">
+                        <rect key="frame" x="110" y="71" width="202" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="iP0-gd-zSG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="d0d-6W-x70" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6fM-RJ-YsD"/>
+                    <constraint firstItem="1yQ-Kk-jcA" firstAttribute="leading" secondItem="d0d-6W-x70" secondAttribute="trailing" constant="5" id="8U7-iu-AMS"/>
+                    <constraint firstItem="qWL-fH-zYy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FbA-t6-cM9"/>
+                    <constraint firstAttribute="bottom" secondItem="1yQ-Kk-jcA" secondAttribute="bottom" constant="4.5" id="Yhk-85-pnV"/>
+                    <constraint firstAttribute="trailing" secondItem="qWL-fH-zYy" secondAttribute="trailing" constant="8" id="Z7f-xI-A91"/>
+                    <constraint firstItem="d0d-6W-x70" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ZA2-6c-4nr"/>
+                    <constraint firstItem="qWL-fH-zYy" firstAttribute="leading" secondItem="d0d-6W-x70" secondAttribute="trailing" constant="8" id="l7Z-1M-o9v"/>
+                    <constraint firstAttribute="trailing" secondItem="1yQ-Kk-jcA" secondAttribute="trailing" constant="8" id="p9U-OE-CVu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="1yQ-Kk-jcA" id="hAz-JK-wxq"/>
+                <outlet property="thumbnail" destination="d0d-6W-x70" id="TSD-Vg-nwf"/>
+                <outlet property="titleLabel" destination="qWL-fH-zYy" id="GIB-5a-Y07"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="22"/>
+        </tableViewCell>
+    </objects>
+</document>

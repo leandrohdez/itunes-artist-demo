@@ -38,6 +38,9 @@
 		432BA04620135A9700199ABC /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04420135A9700199ABC /* ArtistDetailViewController.swift */; };
 		432BA04720135A9700199ABC /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA04520135A9700199ABC /* ArtistDetailViewController.xib */; };
 		432BA04920135AB900199ABC /* ArtistDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */; };
+		432BA04C20137AE900199ABC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04A20137AE900199ABC /* AlbumTableViewCell.swift */; };
+		432BA04D20137AE900199ABC /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA04B20137AE900199ABC /* AlbumTableViewCell.xib */; };
+		432BA04F2013886A00199ABC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04E2013886A00199ABC /* UIImageView.swift */; };
 		F8DB196B04B3E74A338E4AE4 /* Pods_itunes_artist_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		432BA04420135A9700199ABC /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		432BA04520135A9700199ABC /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
 		432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenter.swift; sourceTree = "<group>"; };
+		432BA04A20137AE900199ABC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		432BA04B20137AE900199ABC /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		432BA04E2013886A00199ABC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_artist_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7B9B2CDE2A9179F693CF0B /* Pods-itunes-artist-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-artist-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				432BA00E2012524300199ABC /* UINavigationController.swift */,
+				432BA04E2013886A00199ABC /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,6 +242,8 @@
 				432BA04420135A9700199ABC /* ArtistDetailViewController.swift */,
 				432BA04520135A9700199ABC /* ArtistDetailViewController.xib */,
 				432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */,
+				432BA04A20137AE900199ABC /* AlbumTableViewCell.swift */,
+				432BA04B20137AE900199ABC /* AlbumTableViewCell.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 				432B9FEF2012466400199ABC /* LaunchScreen.storyboard in Resources */,
 				432B9FEC2012466400199ABC /* Assets.xcassets in Resources */,
 				432B9FEA2012466400199ABC /* Main.storyboard in Resources */,
+				432BA04D20137AE900199ABC /* AlbumTableViewCell.xib in Resources */,
 				432BA01F2012545200199ABC /* ArtistListViewController.xib in Resources */,
 				432BA02820125E0400199ABC /* ArtistSearchViewController.xib in Resources */,
 				432BA04320128DD900199ABC /* ArtistListItemTableViewCell.xib in Resources */,
@@ -441,6 +451,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -448,6 +459,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +495,7 @@
 				432BA02E2012684200199ABC /* Config.swift in Sources */,
 				432BA03220126A0000199ABC /* Album.swift in Sources */,
 				432BA04920135AB900199ABC /* ArtistDetailPresenter.swift in Sources */,
+				432BA04F2013886A00199ABC /* UIImageView.swift in Sources */,
 				432BA02720125E0400199ABC /* ArtistSearchViewController.swift in Sources */,
 				432BA00A201251E900199ABC /* Presenter.swift in Sources */,
 				432BA00F2012524300199ABC /* UINavigationController.swift in Sources */,
@@ -500,6 +513,7 @@
 				432BA04220128DD900199ABC /* ArtistListItemTableViewCell.swift in Sources */,
 				432BA03720126CBF00199ABC /* AlbumService.swift in Sources */,
 				432BA02A20125E5D00199ABC /* ArtistSearchPresenter.swift in Sources */,
+				432BA04C20137AE900199ABC /* AlbumTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

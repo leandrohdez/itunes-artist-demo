@@ -19,9 +19,6 @@ class ArtistListViewController: BaseViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-//            tableView.register(ArtistListItemTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-//            tableView.register("ArtistListItemTableViewCell", forCellReuseIdentifier: cellIdentifier)
-            
             tableView.register(UINib(nibName: "ArtistListItemTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         }
     }
@@ -134,7 +131,6 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.artistPresenter.getArtistAlbums(byIndex: indexPath.row)
         self.artistPresenter.artistDetail(byIndex: indexPath.row)
     }
     

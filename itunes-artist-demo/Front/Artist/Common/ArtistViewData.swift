@@ -13,3 +13,10 @@ struct ArtistListItemData {
     var subtitle: String
     var subitems: [String]
 }
+
+struct AlbumListItemData {
+    var title: String
+    var subtitle: String
+    var detail: String
+    var thumbnailUrl: String
+}

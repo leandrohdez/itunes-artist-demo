@@ -30,7 +30,7 @@ class ArtistFlowController {
     func presentArtistSearchViewController(dataSource: ArtistSearchPresenterDataSource? = nil) {
         let viewController: ArtistSearchViewController = ServiceLocator.inject()
         let navController = UINavigationController(rootViewController: viewController)
-//        navController.modalTransitionStyle = .crossDissolve
+        navController.modalTransitionStyle = .crossDissolve
         navigationController?.present(navController, animated: true, completion: nil)
         
         if let ds = dataSource {

@@ -10,6 +10,6 @@ target 'itunes-artist-demo' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'GradientLoadingBar', '~> 1.1'
-  
+  pod 'Spring', '~> 1.0'
 
 end
