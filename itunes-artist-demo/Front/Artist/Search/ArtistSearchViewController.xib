@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistSearchViewController" customModule="itunes_artist_demo" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="L7v-K1-BJG" id="OKS-cY-mCi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-K1-BJG">
+                    <rect key="frame" x="16" y="340.5" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6vR-5w-Yf9"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Zk-46-xYj">
+                    <rect key="frame" x="131" y="124" width="112" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="FyC-aG-8xZ"/>
+                        <constraint firstAttribute="height" constant="100" id="VJb-6G-4GS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por ejemplo: Escribe &quot;Michael Jackson&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5j-JP-D2h">
+                    <rect key="frame" x="22" y="395" width="331" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2lV-XC-7T5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La búsqueda en iTunes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdO-NC-h88">
+                    <rect key="frame" x="16" y="632" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Kas-iI-ZkQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra un artista" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT4-NY-eNK">
+                    <rect key="frame" x="16" y="232" width="343" height="101"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L7v-K1-BJG" firstAttribute="top" secondItem="NT4-NY-eNK" secondAttribute="bottom" constant="7.5" id="0Xv-v3-jGX"/>
+                <constraint firstItem="L7v-K1-BJG" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="9z5-Nk-0L0"/>
+                <constraint firstItem="NT4-NY-eNK" firstAttribute="top" secondItem="2Zk-46-xYj" secondAttribute="bottom" constant="8" id="Di3-p4-E4a"/>
+                <constraint firstItem="NT4-NY-eNK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ESq-hz-6kB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QdO-NC-h88" secondAttribute="bottom" constant="14" id="GgT-bV-yIr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L7v-K1-BJG" secondAttribute="trailing" constant="16" id="L2o-zN-2Yu"/>
+                <constraint firstItem="h5j-JP-D2h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="Lb7-oW-9Vs"/>
+                <constraint firstItem="2Zk-46-xYj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="Ubc-QT-hCg"/>
+                <constraint firstItem="L7v-K1-BJG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Xqm-8V-wdu"/>
+                <constraint firstItem="QdO-NC-h88" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Y3E-Ge-yXs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NT4-NY-eNK" secondAttribute="trailing" constant="16" id="YdV-yd-eQO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QdO-NC-h88" secondAttribute="trailing" constant="16" id="ZVQ-Uk-7mL"/>
+                <constraint firstItem="L7v-K1-BJG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lfe-ST-BWg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h5j-JP-D2h" secondAttribute="trailing" constant="22" id="r3s-gC-YBt"/>
+                <constraint firstItem="h5j-JP-D2h" firstAttribute="top" secondItem="L7v-K1-BJG" secondAttribute="bottom" constant="4.5" id="u79-X1-Hnr"/>
+                <constraint firstItem="2Zk-46-xYj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uWU-cb-ZOT"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        ServiceLocator.registerModules()
+        
+        // lanzo el inicio del flujo
+        let flow: ArtistFlowController = ServiceLocator.inject()
+        flow.showArtistListViewController()
+        
         return true
     }
 

@@ -13,6 +13,32 @@
 		432B9FEC2012466400199ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432B9FEB2012466400199ABC /* Assets.xcassets */; };
 		432B9FEF2012466400199ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432B9FED2012466400199ABC /* LaunchScreen.storyboard */; };
 		432B9FFA2012466500199ABC /* itunes_artist_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B9FF92012466500199ABC /* itunes_artist_demoTests.swift */; };
+		432BA00A201251E900199ABC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA009201251E900199ABC /* Presenter.swift */; };
+		432BA00C2012520900199ABC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA00B2012520900199ABC /* BaseViewController.swift */; };
+		432BA00F2012524300199ABC /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA00E2012524300199ABC /* UINavigationController.swift */; };
+		432BA0122012528E00199ABC /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0112012528E00199ABC /* ServiceLocator.swift */; };
+		432BA014201252CA00199ABC /* SystemServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA013201252CA00199ABC /* SystemServiceLocator.swift */; };
+		432BA0192012535800199ABC /* ArtistServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0182012535800199ABC /* ArtistServiceLocator.swift */; };
+		432BA01B2012538C00199ABC /* ArtistFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA01A2012538C00199ABC /* ArtistFlowController.swift */; };
+		432BA01E2012545200199ABC /* ArtistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA01C2012545200199ABC /* ArtistListViewController.swift */; };
+		432BA01F2012545200199ABC /* ArtistListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA01D2012545200199ABC /* ArtistListViewController.xib */; };
+		432BA0212012548000199ABC /* ArtistListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0202012548000199ABC /* ArtistListPresenter.swift */; };
+		432BA02420125AC300199ABC /* ArtistViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA02320125AC300199ABC /* ArtistViewData.swift */; };
+		432BA02720125E0400199ABC /* ArtistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA02520125E0400199ABC /* ArtistSearchViewController.swift */; };
+		432BA02820125E0400199ABC /* ArtistSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA02620125E0400199ABC /* ArtistSearchViewController.xib */; };
+		432BA02A20125E5D00199ABC /* ArtistSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA02920125E5D00199ABC /* ArtistSearchPresenter.swift */; };
+		432BA02E2012684200199ABC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA02D2012684200199ABC /* Config.swift */; };
+		432BA030201268B200199ABC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA02F201268B200199ABC /* Artist.swift */; };
+		432BA03220126A0000199ABC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA03120126A0000199ABC /* Album.swift */; };
+		432BA03520126CB000199ABC /* ArtistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA03420126CB000199ABC /* ArtistService.swift */; };
+		432BA03720126CBF00199ABC /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA03620126CBF00199ABC /* AlbumService.swift */; };
+		432BA03D20126D2400199ABC /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA03C20126D2400199ABC /* ApiConfig.swift */; };
+		432BA04220128DD900199ABC /* ArtistListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04020128DD900199ABC /* ArtistListItemTableViewCell.swift */; };
+		432BA04320128DD900199ABC /* ArtistListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA04120128DD900199ABC /* ArtistListItemTableViewCell.xib */; };
+		432BA04620135A9700199ABC /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04420135A9700199ABC /* ArtistDetailViewController.swift */; };
+		432BA04720135A9700199ABC /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA04520135A9700199ABC /* ArtistDetailViewController.xib */; };
+		432BA04920135AB900199ABC /* ArtistDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */; };
+		F8DB196B04B3E74A338E4AE4 /* Pods_itunes_artist_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049AFD76E986FE2CB5C42D0D /* Pods-itunes-artist-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-artist-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo.release.xcconfig"; sourceTree = "<group>"; };
 		432B9FE12012466400199ABC /* itunes-artist-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itunes-artist-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		432B9FE42012466400199ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432B9FE62012466400199ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +63,33 @@
 		432B9FF52012466500199ABC /* itunes-artist-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "itunes-artist-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		432B9FF92012466500199ABC /* itunes_artist_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunes_artist_demoTests.swift; sourceTree = "<group>"; };
 		432B9FFB2012466500199ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		432BA009201251E900199ABC /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		432BA00B2012520900199ABC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		432BA00E2012524300199ABC /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		432BA0112012528E00199ABC /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		432BA013201252CA00199ABC /* SystemServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemServiceLocator.swift; sourceTree = "<group>"; };
+		432BA0182012535800199ABC /* ArtistServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistServiceLocator.swift; sourceTree = "<group>"; };
+		432BA01A2012538C00199ABC /* ArtistFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistFlowController.swift; sourceTree = "<group>"; };
+		432BA01C2012545200199ABC /* ArtistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewController.swift; sourceTree = "<group>"; };
+		432BA01D2012545200199ABC /* ArtistListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistListViewController.xib; sourceTree = "<group>"; };
+		432BA0202012548000199ABC /* ArtistListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListPresenter.swift; sourceTree = "<group>"; };
+		432BA02320125AC300199ABC /* ArtistViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewData.swift; sourceTree = "<group>"; };
+		432BA02520125E0400199ABC /* ArtistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchViewController.swift; sourceTree = "<group>"; };
+		432BA02620125E0400199ABC /* ArtistSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistSearchViewController.xib; sourceTree = "<group>"; };
+		432BA02920125E5D00199ABC /* ArtistSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchPresenter.swift; sourceTree = "<group>"; };
+		432BA02D2012684200199ABC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		432BA02F201268B200199ABC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		432BA03120126A0000199ABC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		432BA03420126CB000199ABC /* ArtistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistService.swift; sourceTree = "<group>"; };
+		432BA03620126CBF00199ABC /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		432BA03C20126D2400199ABC /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		432BA04020128DD900199ABC /* ArtistListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListItemTableViewCell.swift; sourceTree = "<group>"; };
+		432BA04120128DD900199ABC /* ArtistListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistListItemTableViewCell.xib; sourceTree = "<group>"; };
+		432BA04420135A9700199ABC /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
+		432BA04520135A9700199ABC /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
+		432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenter.swift; sourceTree = "<group>"; };
+		E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_artist_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7B9B2CDE2A9179F693CF0B /* Pods-itunes-artist-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-artist-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DB196B04B3E74A338E4AE4 /* Pods_itunes_artist_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +111,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097FD9DFAC7E5D9A76436672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		432B9FD82012466400199ABC = {
 			isa = PBXGroup;
 			children = (
 				432B9FE32012466400199ABC /* itunes-artist-demo */,
 				432B9FF82012466500199ABC /* itunes-artist-demoTests */,
 				432B9FE22012466400199ABC /* Products */,
+				DF2FED9011EC3E6B2034F3CE /* Pods */,
+				097FD9DFAC7E5D9A76436672 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +142,11 @@
 		432B9FE32012466400199ABC /* itunes-artist-demo */ = {
 			isa = PBXGroup;
 			children = (
-				432B9FE42012466400199ABC /* AppDelegate.swift */,
+				432BA0042012499500199ABC /* Core */,
+				432BA008201251A600199ABC /* ServiceLocator */,
+				432BA0052012499900199ABC /* Common */,
+				432BA006201249A200199ABC /* Repositories */,
+				432BA007201249AA00199ABC /* Front */,
 				432B9FE62012466400199ABC /* ViewController.swift */,
 				432B9FE82012466400199ABC /* Main.storyboard */,
 				432B9FEB2012466400199ABC /* Assets.xcassets */,
@@ -96,6 +165,148 @@
 			path = "itunes-artist-demoTests";
 			sourceTree = "<group>";
 		};
+		432BA0042012499500199ABC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				432BA02C2012683000199ABC /* Config */,
+				432BA02B2012682A00199ABC /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		432BA0052012499900199ABC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				432BA009201251E900199ABC /* Presenter.swift */,
+				432BA00B2012520900199ABC /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		432BA006201249A200199ABC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				432BA03320126C8C00199ABC /* Services */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		432BA007201249AA00199ABC /* Front */ = {
+			isa = PBXGroup;
+			children = (
+				432BA00D2012523000199ABC /* Extensions */,
+				432BA0102012525800199ABC /* Artist */,
+				432B9FE42012466400199ABC /* AppDelegate.swift */,
+			);
+			path = Front;
+			sourceTree = "<group>";
+		};
+		432BA008201251A600199ABC /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				432BA0112012528E00199ABC /* ServiceLocator.swift */,
+				432BA013201252CA00199ABC /* SystemServiceLocator.swift */,
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		432BA00D2012523000199ABC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				432BA00E2012524300199ABC /* UINavigationController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		432BA0102012525800199ABC /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				432BA0172012532700199ABC /* Common */,
+				432BA0162012532100199ABC /* List */,
+				432BA0152012531900199ABC /* Detail */,
+				432BA02220125A7900199ABC /* Search */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		432BA0152012531900199ABC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				432BA04420135A9700199ABC /* ArtistDetailViewController.swift */,
+				432BA04520135A9700199ABC /* ArtistDetailViewController.xib */,
+				432BA04820135AB900199ABC /* ArtistDetailPresenter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		432BA0162012532100199ABC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				432BA0202012548000199ABC /* ArtistListPresenter.swift */,
+				432BA01C2012545200199ABC /* ArtistListViewController.swift */,
+				432BA01D2012545200199ABC /* ArtistListViewController.xib */,
+				432BA04020128DD900199ABC /* ArtistListItemTableViewCell.swift */,
+				432BA04120128DD900199ABC /* ArtistListItemTableViewCell.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		432BA0172012532700199ABC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				432BA0182012535800199ABC /* ArtistServiceLocator.swift */,
+				432BA01A2012538C00199ABC /* ArtistFlowController.swift */,
+				432BA02320125AC300199ABC /* ArtistViewData.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		432BA02220125A7900199ABC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				432BA02520125E0400199ABC /* ArtistSearchViewController.swift */,
+				432BA02620125E0400199ABC /* ArtistSearchViewController.xib */,
+				432BA02920125E5D00199ABC /* ArtistSearchPresenter.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		432BA02B2012682A00199ABC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				432BA02F201268B200199ABC /* Artist.swift */,
+				432BA03120126A0000199ABC /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		432BA02C2012683000199ABC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				432BA02D2012684200199ABC /* Config.swift */,
+				432BA03C20126D2400199ABC /* ApiConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		432BA03320126C8C00199ABC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				432BA03420126CB000199ABC /* ArtistService.swift */,
+				432BA03620126CBF00199ABC /* AlbumService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DF2FED9011EC3E6B2034F3CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC7B9B2CDE2A9179F693CF0B /* Pods-itunes-artist-demo.debug.xcconfig */,
+				049AFD76E986FE2CB5C42D0D /* Pods-itunes-artist-demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432B9FFE2012466500199ABC /* Build configuration list for PBXNativeTarget "itunes-artist-demo" */;
 			buildPhases = (
+				38E85BBC31A1E7216DB54F86 /* [CP] Check Pods Manifest.lock */,
 				432B9FDD2012466400199ABC /* Sources */,
 				432B9FDE2012466400199ABC /* Frameworks */,
 				432B9FDF2012466400199ABC /* Resources */,
+				AD04B15E1201D958C475C799 /* [CP] Embed Pods Frameworks */,
+				E6864D0E124177F6BAC8B9AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +396,10 @@
 				432B9FEF2012466400199ABC /* LaunchScreen.storyboard in Resources */,
 				432B9FEC2012466400199ABC /* Assets.xcassets in Resources */,
 				432B9FEA2012466400199ABC /* Main.storyboard in Resources */,
+				432BA01F2012545200199ABC /* ArtistListViewController.xib in Resources */,
+				432BA02820125E0400199ABC /* ArtistSearchViewController.xib in Resources */,
+				432BA04320128DD900199ABC /* ArtistListItemTableViewCell.xib in Resources */,
+				432BA04720135A9700199ABC /* ArtistDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +412,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38E85BBC31A1E7216DB54F86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-itunes-artist-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD04B15E1201D958C475C799 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientLoadingBar/GradientLoadingBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientLoadingBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6864D0E124177F6BAC8B9AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		432B9FDD2012466400199ABC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432BA0122012528E00199ABC /* ServiceLocator.swift in Sources */,
+				432BA0192012535800199ABC /* ArtistServiceLocator.swift in Sources */,
+				432BA03520126CB000199ABC /* ArtistService.swift in Sources */,
+				432BA02E2012684200199ABC /* Config.swift in Sources */,
+				432BA03220126A0000199ABC /* Album.swift in Sources */,
+				432BA04920135AB900199ABC /* ArtistDetailPresenter.swift in Sources */,
+				432BA02720125E0400199ABC /* ArtistSearchViewController.swift in Sources */,
+				432BA00A201251E900199ABC /* Presenter.swift in Sources */,
+				432BA00F2012524300199ABC /* UINavigationController.swift in Sources */,
+				432BA0212012548000199ABC /* ArtistListPresenter.swift in Sources */,
+				432BA00C2012520900199ABC /* BaseViewController.swift in Sources */,
+				432BA03D20126D2400199ABC /* ApiConfig.swift in Sources */,
+				432BA01B2012538C00199ABC /* ArtistFlowController.swift in Sources */,
+				432BA014201252CA00199ABC /* SystemServiceLocator.swift in Sources */,
+				432BA01E2012545200199ABC /* ArtistListViewController.swift in Sources */,
+				432BA04620135A9700199ABC /* ArtistDetailViewController.swift in Sources */,
 				432B9FE72012466400199ABC /* ViewController.swift in Sources */,
 				432B9FE52012466400199ABC /* AppDelegate.swift in Sources */,
+				432BA02420125AC300199ABC /* ArtistViewData.swift in Sources */,
+				432BA030201268B200199ABC /* Artist.swift in Sources */,
+				432BA04220128DD900199ABC /* ArtistListItemTableViewCell.swift in Sources */,
+				432BA03720126CBF00199ABC /* AlbumService.swift in Sources */,
+				432BA02A20125E5D00199ABC /* ArtistSearchPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +650,7 @@
 		};
 		432B9FFF2012466500199ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7B9B2CDE2A9179F693CF0B /* Pods-itunes-artist-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +667,7 @@
 		};
 		432BA0002012466500199ABC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 049AFD76E986FE2CB5C42D0D /* Pods-itunes-artist-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
