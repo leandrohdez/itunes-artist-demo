@@ -16,7 +16,7 @@ class ArtistListItemTableViewCell: UITableViewCell {
     @IBOutlet var genreLabel: UILabel! {
         didSet {
             genreLabel.layer.cornerRadius = 10
-            genreLabel.layer.masksToBounds = true
+            genreLabel.clipsToBounds = true
         }
     }
     
@@ -33,7 +33,7 @@ class ArtistListItemTableViewCell: UITableViewCell {
     @IBOutlet var albumsCountLabel: UILabel! {
         didSet {
             albumsCountLabel.layer.cornerRadius = 9
-            albumsCountLabel.layer.masksToBounds = true
+            albumsCountLabel.clipsToBounds = true
         }
     }
     

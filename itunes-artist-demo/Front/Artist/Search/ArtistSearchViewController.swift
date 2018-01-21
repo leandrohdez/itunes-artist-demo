@@ -14,25 +14,25 @@ class ArtistSearchViewController: BaseViewController {
     // MARK: IBOutlets
     @IBOutlet var nameTextField: UITextField! {
         didSet {
-            let border  = CALayer()
-            let width   = CGFloat(0.5)
-            border.borderColor = UIColor.lightGray.cgColor
-            border.frame = CGRect(x: 0, y: nameTextField.frame.size.height - width, width:  nameTextField.frame.size.width, height: nameTextField.frame.size.height)
-            
-            border.borderWidth = width
-            nameTextField.layer.addSublayer(border)
-            nameTextField.layer.masksToBounds = true
+            nameTextField.styleSearchField()
+            nameTextField.delegate = self
         }
     }
     
     @IBOutlet var boxView: SpringView! {
         didSet {
-            boxView.layer.cornerRadius = 4
-            boxView.layer.masksToBounds = true
+            boxView.styleSearchView()
         }
     }
     
     @IBOutlet var topBoxLayoutConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var searchButton: SpringButton! {
+        didSet {
+            searchButton.stylePrimaryButton()
+        }
+    }
+    
     
     // MARK: Presenter
     var artistPresenter: ArtistSearchPresenter!
@@ -60,17 +60,12 @@ class ArtistSearchViewController: BaseViewController {
         
         // cerrar
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(ArtistSearchViewController.closeButtonTapped))
-        
-        // borrar
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Buscar", style: .plain, target: self, action: #selector(ArtistSearchViewController.searchButtonTapped))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
-    
-    
 }
 
 // MARK: - Actions
@@ -80,7 +75,7 @@ extension ArtistSearchViewController {
         self.artistPresenter.closeView()
     }
     
-    @objc func searchButtonTapped() {
+    @IBAction func searchButtonTapped() {
         self.dismissKeyboard()
         let name = self.nameTextField.text!
         self.artistPresenter.searchArtist(byName: name)
@@ -124,3 +119,11 @@ extension ArtistSearchViewController {
     }
 }
 
+
+// MARK: - UITextFieldDelegate
+extension ArtistSearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

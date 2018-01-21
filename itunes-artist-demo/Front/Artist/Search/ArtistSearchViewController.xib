@@ -12,9 +12,7 @@
     <customFonts key="customFonts">
         <array key="Helvetica.ttc">
             <string>Helvetica</string>
-        </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
+            <string>Helvetica-Light</string>
         </array>
     </customFonts>
     <objects>
@@ -22,6 +20,7 @@
             <connections>
                 <outlet property="boxView" destination="fhg-tK-Coh" id="Sth-yz-ib5"/>
                 <outlet property="nameTextField" destination="L7v-K1-BJG" id="OKS-cY-mCi"/>
+                <outlet property="searchButton" destination="mPc-w4-sBN" id="Ue6-Of-74K"/>
                 <outlet property="topBoxLayoutConstraint" destination="sbV-yy-W7l" id="H8u-4o-LO6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,11 +30,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroud_blur" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-P3-ziC" customClass="SpringImageView" customModule="Spring">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-tK-Coh" customClass="SpringView" customModule="Spring">
                     <rect key="frame" x="16" y="214" width="343" height="199"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Michael Jackson" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-K1-BJG">
-                            <rect key="frame" x="20" y="74" width="303" height="50"/>
+                            <rect key="frame" x="20" y="110" width="303" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="APu-rK-MAP"/>
                             </constraints>
@@ -43,22 +48,13 @@
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra un artista" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT4-NY-eNK">
-                            <rect key="frame" x="13" y="26" width="317" height="25"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encuentra tu banda o cantante favorito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT4-NY-eNK">
+                            <rect key="frame" x="25" y="26" width="293" height="46"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="IfP-Ti-BSk"/>
+                                <constraint firstAttribute="height" constant="46" id="IfP-Ti-BSk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
                             <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Apple iTunes - itunes.apple.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdO-NC-h88">
-                            <rect key="frame" x="8" y="172" width="327" height="12"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="12" id="bBy-g9-DXv"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -67,12 +63,9 @@
                         <constraint firstAttribute="trailing" secondItem="L7v-K1-BJG" secondAttribute="trailing" constant="20" id="9FB-ZL-tPx"/>
                         <constraint firstItem="NT4-NY-eNK" firstAttribute="top" secondItem="fhg-tK-Coh" secondAttribute="top" constant="26" id="OrW-YJ-a3S"/>
                         <constraint firstAttribute="height" constant="199" id="QbR-YJ-ZC4"/>
-                        <constraint firstAttribute="trailing" secondItem="NT4-NY-eNK" secondAttribute="trailing" constant="13" id="U0K-Ag-rdj"/>
-                        <constraint firstItem="L7v-K1-BJG" firstAttribute="top" secondItem="fhg-tK-Coh" secondAttribute="top" constant="74" id="UVA-XZ-d8L"/>
-                        <constraint firstItem="QdO-NC-h88" firstAttribute="leading" secondItem="fhg-tK-Coh" secondAttribute="leading" constant="8" id="V34-YI-FHx"/>
-                        <constraint firstAttribute="bottom" secondItem="QdO-NC-h88" secondAttribute="bottom" constant="15" id="ctz-iz-C4N"/>
-                        <constraint firstItem="NT4-NY-eNK" firstAttribute="leading" secondItem="fhg-tK-Coh" secondAttribute="leading" constant="13" id="fSf-lA-gwS"/>
-                        <constraint firstAttribute="trailing" secondItem="QdO-NC-h88" secondAttribute="trailing" constant="8" id="lwq-kQ-xYG"/>
+                        <constraint firstAttribute="trailing" secondItem="NT4-NY-eNK" secondAttribute="trailing" constant="25" id="U0K-Ag-rdj"/>
+                        <constraint firstItem="L7v-K1-BJG" firstAttribute="top" secondItem="fhg-tK-Coh" secondAttribute="top" constant="110" id="UVA-XZ-d8L"/>
+                        <constraint firstItem="NT4-NY-eNK" firstAttribute="leading" secondItem="fhg-tK-Coh" secondAttribute="leading" constant="25" id="fSf-lA-gwS"/>
                         <constraint firstItem="L7v-K1-BJG" firstAttribute="leading" secondItem="fhg-tK-Coh" secondAttribute="leading" constant="20" id="z2l-RB-5Ea"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -80,11 +73,44 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Apple iTunes - itunes.apple.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdO-NC-h88">
+                    <rect key="frame" x="24" y="628" width="327" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="MEp-kp-8HY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-w4-sBN" customClass="SpringButton" customModule="Spring">
+                    <rect key="frame" x="15" y="550" width="345" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="OKa-Zk-m1v"/>
+                    </constraints>
+                    <state key="normal" title="Buscar ahora"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideUp"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="searchButtonTapped" destination="-1" eventType="touchUpInside" id="UIo-tc-Iel"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstItem="QdO-NC-h88" firstAttribute="top" secondItem="mPc-w4-sBN" secondAttribute="bottom" constant="34" id="1QJ-ip-jgb"/>
+                <constraint firstItem="QdO-NC-h88" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="7q0-Dp-mha"/>
+                <constraint firstItem="0vw-P3-ziC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cem-c0-lPB"/>
+                <constraint firstItem="0vw-P3-ziC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gsw-zN-gUY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QdO-NC-h88" secondAttribute="bottom" constant="20" id="Jjh-m3-E5u"/>
+                <constraint firstItem="0vw-P3-ziC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="PXw-AB-POc"/>
                 <constraint firstItem="fhg-tK-Coh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Rnm-YD-oFE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QdO-NC-h88" secondAttribute="trailing" constant="24" id="Zko-Cm-ebX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mPc-w4-sBN" secondAttribute="trailing" constant="15" id="e1D-fV-BzH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fhg-tK-Coh" secondAttribute="trailing" constant="16" id="h10-Qd-ejW"/>
+                <constraint firstItem="mPc-w4-sBN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="mMD-Gm-oXc"/>
+                <constraint firstItem="0vw-P3-ziC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pYb-wm-Zis"/>
                 <constraint firstItem="fhg-tK-Coh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="sbV-yy-W7l"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -92,4 +118,7 @@
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="backgroud_blur" width="540" height="960"/>
+    </resources>
 </document>

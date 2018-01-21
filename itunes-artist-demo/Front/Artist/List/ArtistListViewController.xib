@@ -9,9 +9,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistListViewController" customModule="itunes_artist_demo" customModuleProvider="target">
             <connections>
+                <outlet property="notFoundView" destination="FxF-nT-xTS" id="hf2-zN-Zrq"/>
                 <outlet property="tableView" destination="8gx-xU-c64" id="Fq7-5d-4qi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,14 +27,59 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gx-xU-c64">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gx-xU-c64">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxF-nT-xTS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAJ-ra-IiK">
+                            <rect key="frame" x="67" y="248" width="241" height="170"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="WkL-6a-Y6x">
+                                    <rect key="frame" x="60" y="8" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="120" id="gJ1-Ne-rtg"/>
+                                        <constraint firstAttribute="width" constant="120" id="mR9-39-6a2"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZzzZzz..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ake-rC-Bww">
+                                    <rect key="frame" x="50" y="138" width="141" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="Di6-m8-Jac"/>
+                                        <constraint firstAttribute="width" constant="141" id="w4S-of-PxR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                    <color key="textColor" red="0.83996687069999998" green="0.83996687069999998" blue="0.83996687069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ake-rC-Bww" firstAttribute="centerX" secondItem="WkL-6a-Y6x" secondAttribute="centerX" id="1qs-jN-b9H"/>
+                                <constraint firstAttribute="height" constant="170" id="Gh5-Af-anu"/>
+                                <constraint firstItem="WkL-6a-Y6x" firstAttribute="top" secondItem="OAJ-ra-IiK" secondAttribute="top" constant="8" id="MXv-FC-iuV"/>
+                                <constraint firstAttribute="width" constant="241" id="Nkx-Rp-n95"/>
+                                <constraint firstItem="WkL-6a-Y6x" firstAttribute="centerX" secondItem="OAJ-ra-IiK" secondAttribute="centerX" id="Y8P-qf-drB"/>
+                                <constraint firstItem="ake-rC-Bww" firstAttribute="top" secondItem="WkL-6a-Y6x" secondAttribute="bottom" constant="10" id="yJq-1T-wtE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95477529670000005" green="0.95347354890000002" blue="0.97621184100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="OAJ-ra-IiK" firstAttribute="centerY" secondItem="FxF-nT-xTS" secondAttribute="centerY" id="FQh-L8-B7m"/>
+                        <constraint firstItem="OAJ-ra-IiK" firstAttribute="centerX" secondItem="FxF-nT-xTS" secondAttribute="centerX" id="rHl-rI-gId"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="FxF-nT-xTS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="18T-0C-Q4d"/>
                 <constraint firstItem="8gx-xU-c64" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Keh-MF-55O"/>
+                <constraint firstItem="FxF-nT-xTS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aDy-th-0i5"/>
+                <constraint firstItem="FxF-nT-xTS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="i99-E4-Rdi"/>
+                <constraint firstItem="FxF-nT-xTS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m7D-kx-OZK"/>
                 <constraint firstItem="8gx-xU-c64" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="pf9-lV-k7h"/>
                 <constraint firstItem="8gx-xU-c64" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tOR-vu-MA7"/>
                 <constraint firstItem="8gx-xU-c64" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wjV-XC-wiW"/>
@@ -37,4 +88,7 @@
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="sleep" width="120" height="121"/>
+    </resources>
 </document>

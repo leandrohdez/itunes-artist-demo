@@ -22,13 +22,14 @@ class Artist: CustomStringConvertible, Equatable {
     var genre: String
     
     // lista de albumes
-    var albums: [Album] = []
+    var albums: [Album]?
     
     
     init(id: Int, name: String, genre: String) {
         self.id = id
         self.name = name
         self.genre = genre
+        self.albums = nil
     }
     
     init?(json: JSON) {
@@ -41,6 +42,8 @@ class Artist: CustomStringConvertible, Equatable {
         
         guard let genre = json["primaryGenreName"].string else { return nil }
         self.genre = genre
+        
+        self.albums = nil
     }
     
     var description: String {

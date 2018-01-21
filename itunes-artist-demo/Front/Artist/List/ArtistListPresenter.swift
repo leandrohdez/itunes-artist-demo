@@ -37,7 +37,7 @@ class ArtistListPresenter: Presenter {
             let artist = self.artists[index]
             
             // llamar al servicio si no ha cargado los albumes
-            if artist.albums.count == 0 {
+            if artist.albums == nil {
                 self.serviceGetAlbums(ofArtist: artist, atIndex: index)
             }
         }
@@ -92,15 +92,14 @@ extension ArtistListPresenter {
             self.artists.forEach { artist in
                 
                 var subitems: [AlbumSubitemData] = []
-                artist.albums.forEach { album in
-                    subitems.append(
-                        AlbumSubitemData(title: album.name, thumbnailUrl: album.artworkUrl)
-                    )
+                
+                if let albums = artist.albums {
+                    albums.forEach { album in
+                        subitems.append( AlbumSubitemData(title: album.name, thumbnailUrl: album.artworkUrl) )
+                    }
                 }
                 
-                result.append(
-                    ArtistListItemData(title: artist.name, subtitle: artist.genre, subitems: subitems)
-                )
+                result.append( ArtistListItemData(title: artist.name, subtitle: artist.genre, subitems: subitems) )
             }
             
             view.updateListItemsData(items: result, atIndex: index)

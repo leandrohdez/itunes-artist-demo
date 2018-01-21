@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		432B9FE52012466400199ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B9FE42012466400199ABC /* AppDelegate.swift */; };
-		432B9FE72012466400199ABC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B9FE62012466400199ABC /* ViewController.swift */; };
 		432B9FEA2012466400199ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432B9FE82012466400199ABC /* Main.storyboard */; };
 		432B9FEC2012466400199ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432B9FEB2012466400199ABC /* Assets.xcassets */; };
 		432B9FEF2012466400199ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432B9FED2012466400199ABC /* LaunchScreen.storyboard */; };
@@ -43,6 +42,9 @@
 		432BA04F2013886A00199ABC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA04E2013886A00199ABC /* UIImageView.swift */; };
 		432BA0532013A53300199ABC /* ArtistDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432BA0522013A53300199ABC /* ArtistDetailHeaderView.xib */; };
 		432BA0552013AA7700199ABC /* ArtistDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0542013AA7700199ABC /* ArtistDetailHeaderView.swift */; };
+		432BA0572013D53600199ABC /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0562013D53600199ABC /* UIConfig.swift */; };
+		432BA0592013D80200199ABC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA0582013D80200199ABC /* UIImage.swift */; };
+		432BA05B2013DC9800199ABC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432BA05A2013DC9800199ABC /* UIColor.swift */; };
 		F8DB196B04B3E74A338E4AE4 /* Pods_itunes_artist_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +62,6 @@
 		049AFD76E986FE2CB5C42D0D /* Pods-itunes-artist-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-artist-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo.release.xcconfig"; sourceTree = "<group>"; };
 		432B9FE12012466400199ABC /* itunes-artist-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itunes-artist-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		432B9FE42012466400199ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		432B9FE62012466400199ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		432B9FE92012466400199ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		432B9FEB2012466400199ABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432B9FEE2012466400199ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +99,9 @@
 		432BA04E2013886A00199ABC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		432BA0522013A53300199ABC /* ArtistDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailHeaderView.xib; sourceTree = "<group>"; };
 		432BA0542013AA7700199ABC /* ArtistDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailHeaderView.swift; sourceTree = "<group>"; };
+		432BA0562013D53600199ABC /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		432BA0582013D80200199ABC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		432BA05A2013DC9800199ABC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E57A72065509517A3F7C6E33 /* Pods_itunes_artist_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_artist_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7B9B2CDE2A9179F693CF0B /* Pods-itunes-artist-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-artist-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunes-artist-demo/Pods-itunes-artist-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +161,6 @@
 				432BA0052012499900199ABC /* Common */,
 				432BA006201249A200199ABC /* Repositories */,
 				432BA007201249AA00199ABC /* Front */,
-				432B9FE62012466400199ABC /* ViewController.swift */,
 				432B9FE82012466400199ABC /* Main.storyboard */,
 				432B9FEB2012466400199ABC /* Assets.xcassets */,
 				432B9FED2012466400199ABC /* LaunchScreen.storyboard */,
@@ -225,6 +228,8 @@
 			children = (
 				432BA00E2012524300199ABC /* UINavigationController.swift */,
 				432BA04E2013886A00199ABC /* UIImageView.swift */,
+				432BA0582013D80200199ABC /* UIImage.swift */,
+				432BA05A2013DC9800199ABC /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			children = (
 				432BA02D2012684200199ABC /* Config.swift */,
 				432BA03C20126D2400199ABC /* ApiConfig.swift */,
+				432BA0562013D53600199ABC /* UIConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				432BA0192012535800199ABC /* ArtistServiceLocator.swift in Sources */,
 				432BA03520126CB000199ABC /* ArtistService.swift in Sources */,
 				432BA02E2012684200199ABC /* Config.swift in Sources */,
+				432BA05B2013DC9800199ABC /* UIColor.swift in Sources */,
 				432BA03220126A0000199ABC /* Album.swift in Sources */,
 				432BA04920135AB900199ABC /* ArtistDetailPresenter.swift in Sources */,
 				432BA04F2013886A00199ABC /* UIImageView.swift in Sources */,
@@ -509,12 +516,13 @@
 				432BA0212012548000199ABC /* ArtistListPresenter.swift in Sources */,
 				432BA00C2012520900199ABC /* BaseViewController.swift in Sources */,
 				432BA03D20126D2400199ABC /* ApiConfig.swift in Sources */,
+				432BA0592013D80200199ABC /* UIImage.swift in Sources */,
 				432BA0552013AA7700199ABC /* ArtistDetailHeaderView.swift in Sources */,
 				432BA01B2012538C00199ABC /* ArtistFlowController.swift in Sources */,
+				432BA0572013D53600199ABC /* UIConfig.swift in Sources */,
 				432BA014201252CA00199ABC /* SystemServiceLocator.swift in Sources */,
 				432BA01E2012545200199ABC /* ArtistListViewController.swift in Sources */,
 				432BA04620135A9700199ABC /* ArtistDetailViewController.swift in Sources */,
-				432B9FE72012466400199ABC /* ViewController.swift in Sources */,
 				432B9FE52012466400199ABC /* AppDelegate.swift in Sources */,
 				432BA02420125AC300199ABC /* ArtistViewData.swift in Sources */,
 				432BA030201268B200199ABC /* Artist.swift in Sources */,

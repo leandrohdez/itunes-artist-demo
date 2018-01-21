@@ -51,6 +51,7 @@ class ArtistDetailViewController: BaseViewController {
     private func customizeUI() {
         self.title = "Artista"
     }
+    
 }
 
 // MARK: - Methods
@@ -98,6 +99,13 @@ extension ArtistDetailViewController: UITableViewDelegate, UITableViewDataSource
         cell.descriptionLabel.text  = item.detail
         cell.thumbnail.image        = UIImage(named: "default_music_icon")
         cell.thumbnail!.loadImageFromUrl(urlString: item.thumbnailUrl)
+        
+        if indexPath.row % 2 == 0 {
+            cell.styleOddRow()
+        }
+        else {
+            cell.styleEvenRow()
+        }
         
         return cell
     }

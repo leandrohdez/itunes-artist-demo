@@ -38,11 +38,10 @@ class ArtistDetailPresenter: Presenter {
         if let artist = self.artist {
             var resultListAlbums: [AlbumListItemData] = []
             
-            artist.albums.forEach { album in
-                
-                resultListAlbums.append(
-                    AlbumListItemData(title: album.name, subtitle: album.year, detail: album.copyright, thumbnailUrl: album.artworkUrl)
-                )
+            if let albums = artist.albums {
+                albums.forEach { album in
+                    resultListAlbums.append( AlbumListItemData(title: album.name, subtitle: album.year, detail: album.copyright, thumbnailUrl: album.artworkUrl) )
+                }
             }
             
             view.performListItemsData(items: resultListAlbums)

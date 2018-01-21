@@ -23,6 +23,9 @@ class ArtistListViewController: BaseViewController {
         }
     }
     
+    @IBOutlet var notFoundView: UIView!
+    
+    
     // MARK: Properties
     var listItems: [ArtistListItemData] = []
     
@@ -39,11 +42,12 @@ class ArtistListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.searchButtonTapped()
         customizeUI()
     }
     
     private func customizeUI() {
-        self.title = "Artistas"
+        self.title = "iTunes Demo"
         
         // boton para buscar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(ArtistListViewController.searchButtonTapped))
@@ -68,10 +72,16 @@ extension ArtistListViewController: ArtistListPresenterView {
     func performListItemsData(items: [ArtistListItemData]) {
         self.listItems = items
         self.tableView.reloadData()
+        self.notFoundView.isHidden = (items.count == 0) ? false : true
     }
     
     func updateListItemsData(items: [ArtistListItemData], atIndex: Int) {
         self.listItems = items
+        
+        self.tableView.beginUpdates()
+        
+        self.tableView.reloadRows(at: [IndexPath(row: atIndex, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
     }
     
     func performBeginLoading() {
@@ -103,51 +113,55 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text         = item.title
         cell.genreLabel.text        = item.subtitle
         
+        cell.albumsTitleLabel.text = "Discografía:".uppercased()
+        
         if item.subitems.count > 0 {
-            cell.albumsTitleLabel.text = "Discografía:".uppercased()
+            cell.albumName1Label.isHidden = false
+            cell.albumName1Label.text = "\(item.subitems[0].title)"
             
-            if item.subitems.count > 0 {
-                cell.albumName1Label.isHidden = false
-                cell.albumName1Label.text = "\(item.subitems[0].title)"
-                
-                cell.thumbnail1ImageView.isHidden = false
-                cell.thumbnail1ImageView.image = UIImage(named: "default_music_icon")
-                cell.thumbnail1ImageView!.loadImageFromUrl(urlString: item.subitems[0].thumbnailUrl)
-            }
-            else {
-                cell.albumName1Label.isHidden = true
-                cell.thumbnail1ImageView.isHidden = true
-            }
+            cell.thumbnail1ImageView.isHidden = false
+            cell.thumbnail1ImageView.image = UIImage(named: "default_music_icon")
+            cell.thumbnail1ImageView!.loadImageFromUrl(urlString: item.subitems[0].thumbnailUrl)
+        }
+        else {
+            cell.albumName1Label.isHidden = true
+            cell.thumbnail1ImageView.isHidden = true
+        }
+        
+        if item.subitems.count > 1 {
+            cell.albumName2Label.isHidden = false
+            cell.albumName2Label.text = "\(item.subitems[1].title)"
             
-            if item.subitems.count > 1 {
-                cell.albumName2Label.isHidden = false
-                cell.albumName2Label.text = "\(item.subitems[1].title)"
-                
-                cell.thumbnail2ImageView.isHidden = false
-                cell.thumbnail2ImageView.image = UIImage(named: "default_music_icon")
-                cell.thumbnail2ImageView!.loadImageFromUrl(urlString: item.subitems[1].thumbnailUrl)
-            }
-            else {
-                cell.albumName2Label.isHidden = true
-                cell.thumbnail2ImageView.isHidden = true
-            }
-            
-            if item.subitems.count > 2 {
-                cell.albumsCountLabel.isHidden = false
-                cell.albumsCountLabel.text = "+\(item.subitems.count-2)"
-            }
-            else {
-                cell.albumsCountLabel.isHidden = true
-            }
+            cell.thumbnail2ImageView.isHidden = false
+            cell.thumbnail2ImageView.image = UIImage(named: "default_music_icon")
+            cell.thumbnail2ImageView!.loadImageFromUrl(urlString: item.subitems[1].thumbnailUrl)
+        }
+        else {
+            cell.albumName2Label.isHidden = true
+            cell.thumbnail2ImageView.isHidden = true
+        }
+        
+        if item.subitems.count > 2 {
+            cell.albumsCountLabel.isHidden = false
+            cell.albumsCountLabel.text = "+\(item.subitems.count-2)"
+        }
+        else {
+            cell.albumsCountLabel.isHidden = true
         }
         
         self.artistPresenter.getArtistAlbums(byIndex: indexPath.row)
+        
+        if indexPath.row % 2 == 0 {
+            cell.styleOddRow()
+        }
+        else {
+            cell.styleEvenRow()
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let item = self.listItems[indexPath.row]
         return 130
     }
     
