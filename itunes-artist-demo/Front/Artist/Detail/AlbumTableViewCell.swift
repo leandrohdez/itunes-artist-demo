@@ -19,6 +19,11 @@ class AlbumTableViewCell: UITableViewCell {
     
     @IBOutlet var descriptionLabel: UILabel!
     
+    @IBOutlet var separatorImageView: UIImageView! {
+        didSet {
+            separatorImageView.image = UIImage(color: Colors.cell.separator)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

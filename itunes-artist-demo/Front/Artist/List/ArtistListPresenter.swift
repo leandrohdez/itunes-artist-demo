@@ -10,7 +10,7 @@ import Foundation
 
 protocol ArtistListPresenterView: class {
     func performListItemsData(items: [ArtistListItemData])
-    func updateListItemsData(items: [ArtistListItemData], atIndex: Int)
+    func performUpdateListItemData(item: ArtistListItemData, atIndex: Int)
     func performBeginLoading()
     func performEndLoading()
 }
@@ -88,21 +88,14 @@ extension ArtistListPresenter {
         AlbumService.fetchAlbums(byArtistId: artist.id, success: { (albums) in
             
             self.artists[index].albums = albums
-            var result: [ArtistListItemData] = []
-            self.artists.forEach { artist in
-                
-                var subitems: [AlbumSubitemData] = []
-                
-                if let albums = artist.albums {
-                    albums.forEach { album in
-                        subitems.append( AlbumSubitemData(title: album.name, thumbnailUrl: album.artworkUrl) )
-                    }
-                }
-                
-                result.append( ArtistListItemData(title: artist.name, subtitle: artist.genre, subitems: subitems) )
-            }
             
-            view.updateListItemsData(items: result, atIndex: index)
+            var subitems: [AlbumSubitemData] = []
+            albums.forEach { album in
+                subitems.append( AlbumSubitemData(title: album.name, thumbnailUrl: album.artworkUrl) )
+            }
+           
+            let result = ArtistListItemData(title: self.artists[index].name, subtitle: self.artists[index].genre, subitems: subitems)
+            view.performUpdateListItemData(item: result, atIndex: index)
             
         }) { (error) in
             print("*** Error: \(error)")

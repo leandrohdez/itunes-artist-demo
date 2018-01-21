@@ -11,6 +11,7 @@ import UIKit
 
 
 enum Colors {
+
     // Boton principal
     enum primaryButton {
         static let backgroundNormal         = UIColor(hex: "#F62A2F")
@@ -22,11 +23,27 @@ enum Colors {
     enum cell {
         static let backgroundOdd            = UIColor.white
         static let backgroundEven           = UIColor.lightGray.withAlphaComponent(0.07)
+        static let separator                = UIColor.lightGray.withAlphaComponent(0.2)
     }
     
     // search field
     enum searchField {
         static let borderColor              = UIColor.lightGray.withAlphaComponent(0.5)
+    }
+}
+
+extension UIColor {
+    public convenience init?(someString: String) {
+        let pantone: [String] = [ "#F3C600", "#E87E04", "#2C97DE", "#00BD9C", "#9C55B8" ]
+        let hash = "\(someString.hashValue)"
+        let start = hash.index(hash.endIndex, offsetBy: -1)
+        let lastValue = String(hash[start...])
+        var indexValue = Int(lastValue)!
+        if indexValue >= 5 {
+            indexValue = indexValue - 5
+        }
+        self.init(hex: pantone[indexValue])
+        return
     }
 }
 

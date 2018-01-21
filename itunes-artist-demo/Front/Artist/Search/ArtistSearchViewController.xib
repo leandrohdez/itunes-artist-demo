@@ -30,7 +30,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroud_blur" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-P3-ziC" customClass="SpringImageView" customModule="Spring">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blur_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-P3-ziC" customClass="SpringImageView" customModule="Spring">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
@@ -119,6 +119,6 @@
         </view>
     </objects>
     <resources>
-        <image name="backgroud_blur" width="540" height="960"/>
+        <image name="blur_wallpaper" width="375" height="667"/>
     </resources>
 </document>

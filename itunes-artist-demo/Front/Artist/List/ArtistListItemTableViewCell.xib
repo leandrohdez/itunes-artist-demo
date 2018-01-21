@@ -90,8 +90,15 @@
                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-R0-eCo">
+                        <rect key="frame" x="16" y="129" width="304" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="adj-wy-GGG"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="XVk-R0-eCo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0ix-SQ-OKx"/>
                     <constraint firstAttribute="trailing" secondItem="akc-xR-kfe" secondAttribute="trailing" constant="5" id="3pg-FV-S16"/>
                     <constraint firstItem="inc-w2-Snu" firstAttribute="leading" secondItem="PHb-Vj-aAc" secondAttribute="leading" id="9dH-X1-qap"/>
                     <constraint firstItem="jci-OF-9tU" firstAttribute="top" secondItem="PHb-Vj-aAc" secondAttribute="top" id="BsX-3D-M9f"/>
@@ -99,6 +106,7 @@
                     <constraint firstItem="jci-OF-9tU" firstAttribute="leading" secondItem="PHb-Vj-aAc" secondAttribute="trailing" constant="8" id="Cfc-p1-nSZ"/>
                     <constraint firstItem="jci-OF-9tU" firstAttribute="bottom" secondItem="PHb-Vj-aAc" secondAttribute="bottom" id="DOj-iR-ZhL"/>
                     <constraint firstItem="yoP-Oz-Knw" firstAttribute="top" secondItem="3MP-aA-NbV" secondAttribute="bottom" constant="-1" id="Oni-S4-AHF"/>
+                    <constraint firstAttribute="bottom" secondItem="XVk-R0-eCo" secondAttribute="bottom" constant="-0.5" id="Osd-2E-Swi"/>
                     <constraint firstItem="inc-w2-Snu" firstAttribute="top" secondItem="PHb-Vj-aAc" secondAttribute="bottom" constant="4" id="SNZ-6D-p7i"/>
                     <constraint firstItem="G7Q-3v-x9R" firstAttribute="top" secondItem="inc-w2-Snu" secondAttribute="top" id="Z9n-oh-SKq"/>
                     <constraint firstItem="PHb-Vj-aAc" firstAttribute="leading" secondItem="yoP-Oz-Knw" secondAttribute="leading" id="ZUt-X2-nXb"/>
@@ -112,6 +120,7 @@
                     <constraint firstItem="G7Q-3v-x9R" firstAttribute="leading" secondItem="inc-w2-Snu" secondAttribute="trailing" constant="8" id="fan-52-dPx"/>
                     <constraint firstAttribute="trailing" secondItem="jci-OF-9tU" secondAttribute="trailing" constant="44" id="hHV-RA-g6q"/>
                     <constraint firstAttribute="trailing" secondItem="0HF-qY-xWq" secondAttribute="trailing" constant="5" id="hnd-WW-UrR"/>
+                    <constraint firstAttribute="trailing" secondItem="XVk-R0-eCo" secondAttribute="trailing" id="lej-mC-QGa"/>
                     <constraint firstAttribute="trailing" secondItem="yoP-Oz-Knw" secondAttribute="trailing" constant="4" id="qYk-y4-QHk"/>
                     <constraint firstAttribute="trailing" secondItem="3MP-aA-NbV" secondAttribute="trailing" constant="50" id="v3s-jd-DlE"/>
                 </constraints>
@@ -124,6 +133,7 @@
                 <outlet property="albumsTitleLabel" destination="yoP-Oz-Knw" id="EaX-ve-O8R"/>
                 <outlet property="genreLabel" destination="akc-xR-kfe" id="qKJ-3b-QNr"/>
                 <outlet property="nameLabel" destination="3MP-aA-NbV" id="JKA-2X-bQg"/>
+                <outlet property="separatorImageView" destination="XVk-R0-eCo" id="bkF-6g-FhD"/>
                 <outlet property="thumbnail1ImageView" destination="PHb-Vj-aAc" id="U3c-56-wGN"/>
                 <outlet property="thumbnail2ImageView" destination="inc-w2-Snu" id="Yd6-Ze-8JQ"/>
             </connections>

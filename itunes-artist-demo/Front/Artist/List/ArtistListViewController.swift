@@ -75,13 +75,12 @@ extension ArtistListViewController: ArtistListPresenterView {
         self.notFoundView.isHidden = (items.count == 0) ? false : true
     }
     
-    func updateListItemsData(items: [ArtistListItemData], atIndex: Int) {
-        self.listItems = items
+    func performUpdateListItemData(item: ArtistListItemData, atIndex: Int) {
+        self.listItems[atIndex] = item
         
-        self.tableView.beginUpdates()
-        
-        self.tableView.reloadRows(at: [IndexPath(row: atIndex, section: 0)], with: .automatic)
-        self.tableView.endUpdates()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func performBeginLoading() {
@@ -112,6 +111,7 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nameLabel.text         = item.title
         cell.genreLabel.text        = item.subtitle
+        cell.genreLabel.backgroundColor = UIColor(someString: item.subtitle) 
         
         cell.albumsTitleLabel.text = "Discografía:".uppercased()
         
@@ -169,8 +169,8 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         self.artistPresenter.artistDetail(byIndex: indexPath.row)
     }
-    
 }
+
 
 
 
